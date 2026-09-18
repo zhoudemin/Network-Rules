@@ -5,7 +5,7 @@
 #!date=2026-09-18
 
 [Script]
-Reddit Ads = type=http-response, pattern=^https?:\/\/gql-fed\.reddit\.com\/$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/reddit.js
+Reddit Ads = type=http-response, pattern=^https?:\/\/gql-fed\.reddit\.com\/$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/zhoudemin/Network-Rules/refs/heads/main/Scripts/reddit.js
 
 [MITM]
 hostname = %APPEND% gql-fed.reddit.com
