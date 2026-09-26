@@ -1,0 +1,18 @@
+#!name=红果短剧去广告 (精准修复版)
+#!desc=彻底消除红果短剧插播广告、穿山甲SDK商单卡片与第三方追踪，严格放行正片视频流
+#!date=2026-09-26
+
+[URL Rewrite]
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ reject-dict
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/ reject-dict
+^https?:\/\/.+\.pglstatp-toutiao\.com\/obj\/ad reject
+^https?:\/\/ads[^\/]*\.zijieapi\.com\/ reject-dict
+^https?:\/\/dig\.bdurl\.net\/ reject-200
+^https?:\/\/[^\/]*-reading-ad\.qznovelvod\.com\/ reject
+^https?:\/\/[^\/]*-iosreadingvideo\.qznovelvod\.com\/ reject
+^https?:\/\/[^\/]*-ad-sign\.byteimg\.com\/ reject
+^https?:\/\/[^\/]*\.alibabachengdun\.com\/ reject
+^https?:\/\/amdc-thirdparty\.alipay\.com\/ reject
+
+[MITM]
+hostname = %APPEND% *.pangolin-sdk-toutiao.com, *.pglstatp-toutiao.com, ads*.zijieapi.com, dig.bdurl.net, *-reading-ad.qznovelvod.com, *-iosreadingvideo.qznovelvod.com, *-ad-sign.byteimg.com, *.alibabachengdun.com, amdc-thirdparty.alipay.com
