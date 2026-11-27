@@ -1,6 +1,6 @@
 #!name=红果短剧去广告 (精准修复版)
-#!desc=彻底消除红果短剧插播广告、穿山甲SDK商单卡片、抖音直播带货流广告与第三方追踪，严格放行正片视频流
-#!date=2026-11-22
+#!desc=彻底消除红果短剧插播广告、穿山甲SDK商单卡片与第三方追踪，严格放行正片视频流及抖音商城/直播
+#!date=2026-11-27
 
 [URL Rewrite]
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ reject-dict
@@ -13,14 +13,6 @@
 ^https?:\/\/[^\/]*-ad-sign\.byteimg\.com\/ reject
 ^https?:\/\/[^\/]*\.alibabachengdun\.com\/ reject
 ^https?:\/\/amdc-thirdparty\.alipay\.com\/ reject
-^https?:\/\/webcast[^\/]*\.douyin\.com\/ reject-dict
-^https?:\/\/webcast[^\/]*\.amemv\.com\/ reject-dict
-^https?:\/\/pull-[^\/]*\.douyincdn\.com\/ reject
-^https?:\/\/[^\/]+\/pull-[^\/]*\.douyincdn\.com\/ reject
-^https?:\/\/[^\/]*webcast[^\/]*\.bytegecko\.com\/ reject
-^https?:\/\/[^\/]*-webcast\.douyinpic\.com\/ reject
-^https?:\/\/[^\/]*\.ecombdapi\.com\/ reject-dict
-^https?:\/\/[^\/]*\.ecombdimg\.com\/ reject
 
 [MITM]
-hostname = %APPEND% *.pangolin-sdk-toutiao.com, *.pglstatp-toutiao.com, ads*.zijieapi.com, dig.bdurl.net, *-reading-ad.qznovelvod.com, *-iosreadingvideo.qznovelvod.com, *-ad-sign.byteimg.com, *.alibabachengdun.com, amdc-thirdparty.alipay.com, webcast*.douyin.com, webcast*.amemv.com, pull-*.douyincdn.com, *-webcast-*.bytegecko.com, *-webcast.douyinpic.com, *.ecombdapi.com, *.ecombdimg.com
+hostname = %APPEND% *.pangolin-sdk-toutiao.com, *.pglstatp-toutiao.com, ads*.zijieapi.com, dig.bdurl.net, *-reading-ad.qznovelvod.com, *-iosreadingvideo.qznovelvod.com, *-ad-sign.byteimg.com, *.alibabachengdun.com, amdc-thirdparty.alipay.com
